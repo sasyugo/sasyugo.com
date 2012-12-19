@@ -1,0 +1,43 @@
+/* reset */
+ol,ul,li,h1,h2,h3,nav {
+    display: block;
+    margin: 0em; padding: 0em;
+    font-size: 100%;
+}
+
+body {
+    background-color: white;
+    margin: 0em; padding: 0em;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav ul {
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+    margin: 1em;
+}
+
+nav a {
+    display: block;
+    width: 8em;
+    height: 2em;
+    padding: 3em 0em;
+
+    text-align: center;
+    font-size: 100%;
+    line-height: 2em;
+    text-decoration: none;    
+    text-shadow: 0.2em 0.5em 0.8em rgba(0, 0, 0, 0.5);
+
+    color: #333;
+    background-color: #eeeeee;
+
+    border-radius: 4em;
+    box-shadow: 0.2em 0.5em 0.8em rgba(0, 0, 0, 0.5) inset;
+}
