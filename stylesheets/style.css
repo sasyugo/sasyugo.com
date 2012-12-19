@@ -8,10 +8,38 @@ ol,ul,li,h1,h2,h3,nav {
 body {
     background-color: white;
     margin: 0em; padding: 0em;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#wrap {
+    position: relative;
+    top: 50%;
+    left: 0%;
+    width: 27em;
+    margin: auto;
+    -webkit-transform: translate(0px, -50%);
 }
 
 h1 {
     text-align: center;
+    background-color: #888;
+    width: 8em;
+    font-size: 100%;
+    line-height: 2em;
+    padding: 3em 0em;
+    margin: 0.5em;
+    float: left;
+    box-shadow: 0.1em 0.3em 0.5em rgba(0, 0, 0, 0.8);
+    background: -webkit-gradient(linear, left top, right bottom, from(#ccc), to(#888));
+    color: #ccc;
+    text-shadow: -0.2em -0.2em 0.1em rgba(0, 0, 0, 0.4);
+    overflow: hidden;    
+}
+
+nav {
+    margin: 0em auto;
 }
 
 nav ul {
@@ -20,7 +48,7 @@ nav ul {
 
 nav li {
     float: left;
-    margin: 1em;
+    margin: 0.5em;
 }
 
 nav a {
@@ -33,11 +61,55 @@ nav a {
     font-size: 100%;
     line-height: 2em;
     text-decoration: none;    
+
     text-shadow: 0.2em 0.5em 0.8em rgba(0, 0, 0, 0.5);
+    box-shadow: 0.2em 0.5em 0.8em rgba(0, 0, 0, 0.5) inset;
 
     color: #333;
-    background-color: #eeeeee;
+    background-color: #eee;
 
     border-radius: 4em;
-    box-shadow: 0.2em 0.5em 0.8em rgba(0, 0, 0, 0.5) inset;
+}
+
+nav a:hover {
+    -webkit-animation-name: button-anime;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease;    
+}
+
+nav a:hover:after {
+    content: "↑";
+    display: block;
+}
+
+
+@-webkit-keyframes button-anime {
+    0% {
+        background-color: #eee;
+        text-shadow: 0.2em 0.5em 0.8em rgba(0, 0, 0, 0.5);
+        box-shadow: 0.2em 0.5em 0.8em rgba(0, 0, 0, 0.5) inset;
+
+        line-height: 2em;
+        padding: 3em 0em 1em 0em;
+        height: 4em;
+    }
+    50% {
+        background-color: #fff;
+        text-shadow: 0.2em 0.7em 1.2em rgba(0, 0, 0, 0.5);
+        box-shadow: 0.2em 0.7em 1.2em rgba(0, 0, 0, 0.5) inset;
+
+        line-height: 1.5em;
+        padding: 3em 0em 1em 0em;
+        height: 4em;
+    }
+    100% {
+        background-color: #eee;
+        text-shadow: 0.2em 0.5em 0.8em rgba(0, 0, 0, 0.5);
+        box-shadow: 0.2em 0.5em 0.8em rgba(0, 0, 0, 0.5) inset;
+
+        line-height: 2em;
+        padding: 3em 0em 1em 0em;
+        height: 4em;
+    }
 }
